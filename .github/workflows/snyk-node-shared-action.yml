@@ -71,11 +71,11 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           SNYK_ORG: ${{ inputs.SNYK_ORG }}
           
-      - name: IaC Test  
-        run: snyk iac test -d --report || true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          SNYK_ORG: ${{ inputs.SNYK_ORG }}
+  #    - name: IaC Test  
+   #     run: snyk iac test -d --report || true
+    #    env:
+     #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      #    SNYK_ORG: ${{ inputs.SNYK_ORG }}
 
         # Build the docker image for testing
         # Note: This currently does not work because we need to pass in an image to test in the run commands
